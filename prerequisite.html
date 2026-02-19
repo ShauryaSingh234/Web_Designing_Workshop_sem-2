@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hill Climb Racing</title>
+    <style>
+        body{
+            margin: 0;
+            background-color: rgb(127, 252, 248);
+            text-align: center;
+        }
+        .object{
+            margin-top: 300px;
+            display: flex;
+            flex-direction: row;
+        }
+        .car{
+            width: 200px;
+            margin-left: 50px;
+            transform: rotate(-20deg);
+        }
+        .head{
+            background-color: antiquewhite;
+            border-radius: 50%;
+            height: 17px;
+            width: 17px;
+            margin-left: 85px;
+        }
+        .upper{
+            display: flex;
+            justify-content: center;
+        }
+        .person{
+            height: 20px;
+            width: 20px;
+            background-color: lightcoral;
+        }
+        .tri{
+            width: 0;
+            height: 0;
+            border-top: 20px solid transparent;
+            border-left: 15px solid red;
+        }
+        .carbody1{
+            height: 40px;
+            width: 170px;
+            background-color: red;
+            display: flex;
+            justify-content: space-around;
+            border-radius: 6px;
+            border: 2px solid black;
+            margin: auto;
+        }
+        .line{
+            height: 40px;
+            width: 2px;
+            background-color: black;
+        }
+        .wheels{
+            display: flex;
+            justify-content: space-between;
+            width: 150px;
+            margin: 5px auto;
+        }
+        .wheel{
+            height: 25px;
+            width: 25px;
+            border: 5px solid grey;
+            border-radius: 50%;
+            background-color: rgb(173, 172, 172);
+        }
+        .road{
+            height: 25px;
+            background-color: rgb(94, 94, 94);
+            margin-top: 30px;
+            border: 2px solid black;
+        }
+        .buttons{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        .move{
+            height: 100px;
+            width: 100px;
+            background-color: rgb(212, 212, 212);
+            color: white;
+            font-size: 30px;
+            margin: 20px;
+            cursor: pointer;
+            box-shadow: 5px 5px 0 rgb(113, 113, 113);
+            border: 5px solid rgb(174, 174, 174);
+        }
+        .move:hover{
+            background-color: rgb(75, 75, 75);
+            border-color: rgb(75, 75, 75);
+        }
+        .menu{
+            margin-top: 20px;
+            margin-left: 40px;
+            justify-content: space-between;
+            display: flex;
+            flex-direction: row;
+            margin-right: 20px;
+        }
+        .fuelbar{
+            height: 30px;
+            width: 90px;
+            border: 3px solid black;
+            border-radius: 5px;
+        }
+        .fuel{
+            width: 80px;
+            background-color: rgb(57, 255, 47);
+            height: 30px;
+        }
+        .pause{
+            border: 0;
+            background-color: rgb(127, 252, 248);
+            font-size: 25px;
+            transition: all 0.5s ease;
+            color: white;
+        }
+        .pause:hover{
+            transition: all 0.5s ease;
+            cursor: pointer;
+            color: black;
+        }
+        .surface{
+            background-color: grey;
+            margin: 0;
+            height: 300px;
+        }
+        .coin{
+            height: 30px;
+            width: 30px;
+            background-color: #ffff00;
+            border: 6px solid rgb(223, 223, 19);
+            border-radius: 50%;
+            margin-left: 30px;
+            margin-top: 70px;
+            color: rgb(190, 190, 14);
+            font-weight: bold;
+            align-content: center;
+        }
+        .visiblefuel{
+            margin-left: 30px;
+            margin-top: 63px;
+            font-size: 40px;
+        }
+        .upcoin{
+            height: 16px;
+            width: 16px;
+            background-color: #ffff00;
+            border: 6px solid rgb(223, 223, 19);
+            border-radius: 50%;
+        }
+        .image{
+            border: 5px solid rgb(58, 58, 58);
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <div style="display: flex;"><span style="font-size: 27px;">⛽</span>
+    <div class="fuelbar"><div class="fuel"></div></div>
+    </div>
+    <div style="color: white;"><button class="pause">▐▐</button></div>
+    </div>
+    <div style="height: 20px;"></div>
+    <div style="align-items: left;display: flex;margin-left: 40px;"><div class="upcoin"></div><span style="color: white;font-weight: bold;font-size: 27px;">&nbsp;&nbsp;637&nbsp;289</span></div>
+    <div class="object">
+        
+        <div class="car">
+            <div class="head"></div>
+
+            <div class="upper">
+                <div class="person"></div>
+                <div class="tri"></div>
+            </div>
+
+            <div class="carbody1">
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+
+            <div class="wheels">
+                <div class="wheel"></div>
+                <div class="wheel"></div>
+            </div>
+        </div>   
+        
+        <div style="display: flex;margin-left: 500px;">
+        <div class="visiblefuel">⛽</div>
+        <div class="coin">5</div>
+        <div class="coin">500</div>
+        <div class="coin">100</div>
+        <div class="coin">500</div>
+        <div class="coin">5</div>
+        <div class="coin">100</div>
+        </div>
+    </div>
+    
+    <div class="surface">
+        <div class="road"></div>
+        <div class="buttons">
+            <button class="move">Brake</button>
+            <div class="image"><img src="https://thumbs.dreamstime.com/b/simple-speedometer-gauge-icon-representing-measurement-speed-performance-progress-minimalist-graphic-indicating-407807412.jpg" width="190px" height="130px"></div>
+            <div class="image"><img src="https://thumbs.dreamstime.com/b/simple-speedometer-gauge-icon-representing-measurement-speed-performance-progress-minimalist-graphic-indicating-407807412.jpg" width="190px" height="130px"></div>
+            <button class="move">Gas</button>
+        </div>
+    </div>
+</body>
+</html>
