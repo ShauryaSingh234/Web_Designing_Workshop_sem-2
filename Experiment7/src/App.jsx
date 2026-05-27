@@ -5,9 +5,9 @@ import heroImg from './assets/hero.png'
 import './App.css'
 import Greeting from './components/Greeting'
 import Student from './components/Student'
+import Name from './components/Name'
 
 function App() {
-  
 
   return (
     <>
@@ -15,6 +15,7 @@ function App() {
       <Student name={'Rahul Sharma'} course={'Computer Science'} marks={85}/><br/>
       <Student name={'Anita Verma'} course={'Information Technology'} marks={92}/><br/>
       <Student name={'Rohan Gupta'} course={'Electronics'} marks={78}/><br/>
+      <Name/>
     </>
   )
 }
